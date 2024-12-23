@@ -297,8 +297,6 @@ div h1 {
   display: flex;
   width: 100%;
   padding: 1rem;
-  margin-left: -9rem;
-  margin-top: -4rem;
   font-size: 2.6rem;
   text-align: center;
 }
@@ -1459,6 +1457,96 @@ div h1 {
 }
 
 @media (min-width: 2560px) {
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  button {
+    border-radius: 3.125rem;
+    padding: 0.75rem 1.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .Entrar {
+    font-size: 1.2rem;
+    border: 2px solid rgba(224, 19, 255, 1);
+    background-color: transparent;
+    color: #ffffff;
+    width: 9rem;
+    height: 3rem;
+  }
+
+  .Entrar:hover {
+    box-shadow: 0 0 10px 3px rgba(224, 19, 255, 1);
+    text-shadow: 0 0 5px rgba(224, 19, 255, 1), 0 0 10px rgba(224, 19, 255, 1);
+  }
+
+  .Binance:hover {
+    background-color: rgba(224, 19, 255, 0.76);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+  }
+
+  .logotipo {
+    width: 11rem;
+    cursor: pointer;
+  }
+
+  .Binance {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(224, 19, 255);
+
+    width: 11rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .text-purple h3 {
+    padding: 1rem 2rem;
+    display: flex;
+    text-align: center;
+    margin-top: 3rem;
+    font-family: "Montserrat";
+    font-size: 2rem;
+  }
+
+  .text-introduction {
+    display: flex;
+    text-align: center;
+    line-height: 1.6rem;
+    width: 73rem;
+    font-size: 1.2rem;
+    margin: auto;
+    padding: center;
+    margin-top: 10rem;
+  }
+
+  /*vídeo background*/
+
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+
   .video-background {
     display: flex;
     position: absolute;
@@ -1471,26 +1559,148 @@ div h1 {
     transform: translate(-50%, -50%);
   }
 
-  .text-introduction {
-    display: flex;
-    text-align: center;
-    line-height: 1.5rem;
-    width: 76rem;
-    font-size: 1rem;
+  /*box texto em tempo real */
+
+  /*tempo-real*/
+
+  .real-time-all h1 {
+    font-weight: 400;
+    margin: 6rem 0;
     padding: 3rem;
-    margin-top: 10rem;
-    margin-left: 50rem;
+    align-items: center;
+    font-size: 1.9rem;
+    background-image: linear-gradient(
+      45deg,
+      rgba(128, 0, 128, 0.581),
+      rgba(122, 6, 246, 0.603),
+      rgba(236, 8, 160, 0.504)
+    );
+    width: 100%;
+    height: 20rem;
+  }
+
+  /*Dúvidas*/
+
+  .box-duvidas {
+    justify-content: center;
+    padding-top: 20rem;
+    display: grid;
+    align-items: center;
+  }
+
+  div h1 {
+    padding: center;
+    padding-top: 3rem;
+    padding-left: 3rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: "Montserrat";
+    margin: center;
+    display: flex;
+  }
+
+  .box-caixas {
+    margin-top: -51rem;
+    padding: 73rem;
+    grid-column: auto;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .box-caixas div {
+    border-color: #ac08f8 rgba(49, 26, 22, 0.268);
+    border-style: solid;
+    padding: 1rem;
+    display: flex;
+    background-color: rgba(74, 72, 70, 0.524);
+    width: 21rem;
+    height: 20rem;
+    border-radius: 40px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .box-caixas div p {
+    margin-top: 1rem;
+    text-align: start;
+    font-size: 1rem;
+    margin: 1rem;
+  }
+
+  .box-caixas div h3 {
+    padding: center;
+    margin: center;
+    font-size: 1.3rem;
+    text-align: start;
+    padding-top: 3rem;
+    margin: 0px 1rem;
+  }
+
+  /*Sobre a Purple Coin*/
+
+  .about-purple {
+    padding: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #37064e;
+    height: 66rem;
+    width: 100%;
   }
 
   .about-purple h1 {
     display: flex;
-    width: 100%;
-    padding: 1rem;
-    margin-left: 97rem;
-    margin-top: 5rem;
+    padding: auto;
+    padding-left: 27.9rem;
+    padding-top: 10rem;
     font-size: 2.6rem;
     text-align: start;
   }
+  .about-purple p {
+    padding: center;
+    padding-top: 10rem;
+    margin: center;
+    font-size: 1.3rem;
+    width: 30rem;
+    text-align: start;
+  }
+
+  .about-purple img {
+    display: flex;
+    width: 70rem;
+    height: 70rem;
+    margin: center;
+    margin-top: -4rem;
+    padding: center;
+  }
+
+  .btn-about {
+    padding: center;
+    border-radius: 80px;
+    font-size: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: center;
+    margin-top: 8rem;
+    border-style: none;
+    background-color: #fff;
+    width: 19rem;
+    height: 9;
+    cursor: pointer;
+  }
+
+  .btn-about:hover {
+    background-color: purple;
+    color: #fff;
+  }
+
+  /*footer*/
 
   .footer-all {
     padding: 2rem;
@@ -1510,18 +1720,19 @@ div h1 {
     display: flex;
     width: 12rem;
     transform: translateX(-50%);
-    margin-top: 42rem;
-    margin-left: 34rem;
+    padding: center;
+    margin: center;
     cursor: pointer;
   }
 
   .procuct {
     display: flex;
     flex-direction: column;
-    margin-left: 77rem;
     margin-top: 38rem;
-    position: absolute;
-    font-size: 1.5rem;
+    padding: center;
+    padding-left: 4rem;
+    margin: center;
+    font-size: 1.8rem;
     font-weight: 500;
 
     & a {
@@ -1529,7 +1740,7 @@ div h1 {
       text-decoration: none; /* Remove o sublinhado */
       color: inherit; /* Faz com que o link herde a cor do texto do elemento pai */
       padding-top: 1rem;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 300;
     }
   }
@@ -1537,10 +1748,11 @@ div h1 {
   .Listing {
     display: flex;
     flex-direction: column;
-    margin-left: 113rem;
     margin-top: 38rem;
-    position: absolute;
-    font-size: 1.5rem;
+    padding: center;
+    padding-left: 4rem;
+    margin: center;
+    font-size: 1.8rem;
     font-weight: 500;
 
     & a {
@@ -1548,7 +1760,7 @@ div h1 {
       text-decoration: none; /* Remove o sublinhado */
       color: inherit; /* Faz com que o link herde a cor do texto do elemento pai */
       padding-top: 1rem;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 300;
     }
   }
@@ -1556,10 +1768,11 @@ div h1 {
   .community {
     display: flex;
     flex-direction: column;
-    margin-left: 150rem;
     margin-top: 38rem;
-    position: absolute;
-    font-size: 1.5rem;
+    padding: center;
+    padding-left: 4rem;
+    margin: center;
+    font-size: 1.8rem;
     font-weight: 500;
 
     & a {
@@ -1567,7 +1780,7 @@ div h1 {
       text-decoration: none; /* Remove o sublinhado */
       color: inherit; /* Faz com que o link herde a cor do texto do elemento pai */
       padding-top: 1rem;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 300;
     }
   }
