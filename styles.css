@@ -8,7 +8,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: transparent; /* Ajuste a cor se necessário */
+  background-color: transparent;
   z-index: 10;
   position: relative;
   width: 100%;
@@ -41,7 +41,7 @@ header {
   transition: background-color 0.3s ease;
 }
 .menu a {
-  margin-right: 1rem; /* Espaçamento entre os botões */
+  margin-right: 1rem;
 }
 
 button {
@@ -80,6 +80,20 @@ button {
   background-color: rgba(224, 19, 255, 1);
 }
 
+.text-purple {
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  margin-top: 3rem;
+}
+
+.text-introduction {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  text-align: justify;
+  padding: 0 1rem;
+  line-height: 1.4;
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -109,49 +123,53 @@ button {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-
 /* Responsividade */
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
+  header {
+    position: relative;
+  }
   .menu {
     display: none;
-    flex-direction: column;
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.8); 
-    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.274);
+    padding: 0.15rem;
     border-radius: 5px;
     z-index: 20;
+    flex-direction: column;
   }
 
   .menu.active {
     display: flex;
   }
-
   .menu ul {
     flex-direction: column;
     gap: 0.5rem;
   }
-
   .hamburger {
     display: flex;
   }
-} 
+  .menu button.Binance {
+    all: unset;
+  }
+  .menu button.Binance:hover {
+    box-shadow: 0 0 10px 3px rgba(224, 19, 255, 1);
+    text-shadow: 0 0 5px rgba(224, 19, 255, 1), 0 0 10px rgba(224, 19, 255, 1);
+  }
 
-.text-purple{
-  font-size: 1.5rem;
-  padding: 0 1rem;
-  margin-top: 3rem;
+  .menu button {
+    all: unset;
+    font-size: 1.1rem;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+    transition: all 0.2s ease;
+  }
 }
 
-.text-introduction {
-  font-size: 0.8rem;
-  margin-top: 1rem;
-  text-align: justify;
-  padding: 0 1rem; 
-  line-height: 1.4;
-}
 /*vídeo background*/
 
 .video-container {
@@ -194,274 +212,280 @@ button {
 }
 
 .real-time-all h1 {
-    font-weight: 400;
-    margin: 0;
-    font-size: 1.5rem;
-    color: #fff;
-    text-align: center; 
+  font-weight: 400;
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
   color: #fff;
 }
 /*Dúvidas*/
 
-.box-duvidas {
-  justify-content: center;
-  padding-top: 20rem;
-  display: grid;
-  align-items: center;
+div h1 {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: "Montserrat";
 }
 
-div h1 {
-  padding: 4rem;
-  position: absolute;
-  text-align: center;
-  font-size: 1.8rem;
-  font-family: "Montserrat";
-  margin: 10rem -10rem 49rem 68rem;
-  width: 30rem;
-  display: flex;
-}
+/*fduvidas*/
 
 .box-caixas {
-  margin-top: -51rem;
-  padding: 73rem;
-  grid-column: auto;
   display: grid;
-  flex-direction: column;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 8rem;
+  margin: 8rem auto 0 auto;
+  place-items: center;
+  gap: 20px;
+  max-width: 39.3125rem;
+  align-items: stretch;
+  padding: 0 1.5rem;
 }
 
-.box-caixas div {
-  border-color: #ac08f8 rgba(49, 26, 22, 0.268);
-  border-style: solid;
+.box-caixas article {
+  border: 0.125rem outset #ac08f8;
   padding: 1rem;
-  display: flex;
-  background-color: rgba(74, 72, 70, 0.524);
-  width: 21rem;
-  height: 20rem;
-  border-radius: 40px;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  border-radius: 1.5625rem;
+  background-color: rgba(77, 69, 69, 0.099);
+  text-align: center;
+  box-shadow: 15px 5px 15px rgba(0, 0, 0, 0.329);
 }
 
-.box-caixas div p {
-  margin-top: 1rem;
-  text-align: start;
-  font-size: 1rem;
-  margin: 1rem;
+.box-caixas article h3 {
+  font-size: 0.9375rem;
+  margin: 0.5rem;
 }
 
-.box-caixas div h3 {
-  font-size: 1.3rem;
-  text-align: start;
-  padding-top: 3rem;
-  margin: 0px 1rem;
+.box-caixas article p {
+  margin: 0.8rem;
+  font-size: 0.8rem;
+  text-align: justify;
 }
-
-/*Sobre a Purple Coin*/
 
 .about-purple {
-  padding: 4rem;
-  display: flex;
-  margin-top: -63rem;
-  align-items: center;
-  flex-direction: column;
-  background-color: #37064e;
-  height: 50rem;
-  width: 100%;
+  margin-bottom: 10rem;
+  max-width: 100%;
 }
 
 .about-purple h1 {
+  margin-top: 5.1871rem;
   display: flex;
-  width: 100%;
-  padding: 1rem;
-  margin-left: -9rem;
-  margin-top: -4rem;
-  font-size: 2.6rem;
-  text-align: center;
-}
-.about-purple p {
-  padding: 0;
-  margin-top: 6rem;
-  margin-left: -1rem;
-  font-size: 1.3rem;
-  width: 100%;
-  text-align: center;
-}
-
-.about-purple img {
-  position: absolute;
-  display: flex;
-  width: 30rem;
-  height: 30rem;
-  margin-top: 35.4rem;
-  margin-left: 0rem;
-}
- 
-
-.btn-about {
-  padding: 1.2rem;
-  border-radius: 80px;
-  font-size: 1.5rem;
-  text-align: center;
   justify-content: center;
-  display: flex;
-  margin-left: -9.4rem;
-  margin-top: 24rem;
-  border-style: none;
-  background-color: #fff;
-  width: 19rem;
-  height: 9;
-  cursor: pointer;
+  text-align: center;
 }
 
-.btn-about:hover {
-  background-color: purple;
-  color: #fff;
-}
-
-/*footer*/
-
-.footer-all {
-  padding: 2rem;
+.content-wrapper {
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-decoration: none;
-  list-style: none;
-  color: #fff;
-  font-family: "Montserrat";
-  font-size: 4rem;
-  margin-left: -40rem;
-  margin-top: -33rem;
-}
-
-.logotipo-footer {
-  display: flex;
-  width: 10rem;
-  transform: translateX(-50%);
-  margin-top: 32rem;
-  margin-left: 43rem;
-  cursor: pointer;
-}
-
-.procuct {
-  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  margin-left: 39rem;
-  margin-top: 38rem;
-  position: absolute;
-  font-size: 2.3rem;
-  font-weight: 500;
-
-  & a {
-    display: none;
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Faz com que o link herde a cor do texto do elemento pai */
-    padding-top: 1rem;
-    font-size: 1.8rem;
-    font-weight: 300;
-  }
+  margin-top: 3.75rem;
 }
 
-.Listing {
-  display: flex;
-  flex-direction: column;
-  margin-left: 40rem;
-  margin-top: 42rem;
-  position: absolute;
-  font-size: 2.3rem;
-  font-weight: 500;
-
-  & a {
-    display: none;
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Faz com que o link herde a cor do texto do elemento pai */
-    padding-top: 1rem;
-    font-size: 1.8rem;
-    font-weight: 300;
-  }
+.content-inner {
+  align-self: stretch;
+  background: rgba(255, 255, 255, 0.064);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.community {
-  display: flex;
-  flex-direction: column;
-  margin-left: 40rem;
-  margin-top: 46rem;
-  position: absolute;
-  font-size: 2.3rem;
-  font-weight: 500;
-
-  & a {
-    display: none;
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Faz com que o link herde a cor do texto do elemento pai */
-    padding-top: 1rem;
-    font-size: 1.8rem;
-    font-weight: 300;
-  }
+.typing-effect {
+  font-size: 0.8rem;
+  text-align: justify;
+  margin: 2rem;
 }
 
-.footer-all::before {
-  display: block;
-  background-color: rgb(12, 7, 12);
-  content: "";
-  position: absolute;
-  margin-top: 40rem;
-  margin-left: 40rem;
-  transform: translateX(-50%);
-  transform: translateY(-50%);
+.image-container img {
+  display: none;
+}
+.footer-background {
+  background-color: #110815c4;
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  height: 30rem;
-  background-repeat: no-repeat;
-  z-index: -1; /* Coloca o fundo atrás do texto */
-  opacity: 1; /* Ajusta a opacidade do fundo */
-
-  & img {
-    margin-left: 6rem;
-  }
+  height: 200px;
+  display: flex;
+  color: white;
+  position: relative;
 }
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.footer-content div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-content a {
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  margin-top: 0.3125rem;
+}
+
+.footer-content a:hover {
+  color: #ac08f8;
+}
+
+.footer-logo {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: auto;
+}
+/*Sobre a Purple Coin*/
 
 /*MEDIA QUERIES*/
 
-
-@media (min-width: 700px) {
-  
+@media (min-width: 600px) {
   .text-introduction {
     margin-top: 2.25rem;
     font-size: 0.95rem;
-  
   }
- 
 }
 @media (min-width: 1080px) {
-  .text-purple{
+  .text-purple {
     margin: 1.55rem;
     font-size: 2rem;
-
   }
-  
   .text-introduction {
-
     text-align: justify;
-    font-size: 1.20rem;
+    font-size: 1.2rem;
     margin: 1.55rem;
-
   }
 }
 
 /*faixa texto*/
+@media (min-width: 600px) {
+  .real-time-all h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.375rem;
+  }
+}
 
 @media (min-width: 1080px) {
   .real-time-all h1 {
     display: flex;
     justify-content: center;
-    font-size: 1.60rem;
+    font-size: 1.6rem;
     white-space: nowrap;
-    font-size: 2rem; 
   }
 }
 
+/*box duvidas*/
+
+@media (min-width: 600px) {
+  .box-caixas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .box-caixas {
+    gap: 25px;
+    margin: 8rem auto 0 auto;
+    max-width: 50rem;
+    justify-content: center;
+  }
+
+  .box-caixas article {
+    height: 15rem;
+    width: 100%;
+  }
+  .box-caixas article p {
+    font-size: 1.0625rem;
+  }
+
+  .box-caixas article h3 {
+    font-size: 1.125rem;
+  }
+}
+/*sobre o token*/
+
+@media (min-width: 600px) {
+  .about-purple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20rem;
+  }
+
+  .content-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .typing-effect {
+    font-size: 1rem;
+    margin-right: 2rem;
+  }
+
+  .image-container img {
+    display: block;
+    width: 50%;
+    max-width: 15.625rem;
+    margin-right: 1.25rem;
+    border-radius: 3.75rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .typing-effect {
+    margin-right: 2rem;
+    font-size: 1.125rem;
+    flex: 1;
+  }
+
+  .content-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .image-container img {
+    width: 100%;
+    max-width: 22.25rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .footer-content p {
+    font-size: 1.25rem;
+  }
+
+  .footer-content a {
+    font-size: 0.875rem;
+  }
+
+  .footer-logo {
+    width: 8rem;
+  }
+
+  .Binance {
+    font-size: 1rem;
+  }
+
+  .contato {
+    font-size: 1rem;
+  }
+}
