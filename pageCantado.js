@@ -1,23 +1,19 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".menu");
 
-//função para o menu mobile (hamburger)
-const navBar = document.getElementById ("hamburger");
-const hamburger = document.querySelector('.hamburger')
-const navLinks = document.querySelector('.nav-links')
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  });
+});
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navLinks.classList.toggle('active');
-})
-
-navLinks.querySelectorAll('a').forEach(link =>{
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navLinks.classList.remove('active');
-  })
-})
-
-
-
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  });
+});
 
 const phoneInput = document.getElementById("phone");
 
